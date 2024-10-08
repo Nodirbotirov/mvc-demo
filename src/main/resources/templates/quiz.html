@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест на знание MVC</title>
+</head>
+<body>
+<h1>
+    <form action="/mvc/quiz" method="post">
+        <dev>
+            <p>1. Что означает аббревиатура MVC?</p>
+            <label><input type="checkbox" name="q1" value="1"> Monitor-Visible-Cure</label><br>
+            <label><input type="checkbox" name="q1" value="2"> Model-View-Controller</label><br>
+            <label><input type="checkbox" name="q1" value="3"> Master-View-Connection</label><br>
+            <label><input type="checkbox" name="q1" value="4"> Model-View-Connection</label><br>
+        </dev>
+
+        <dev>
+            <p>2. Какой компонент отвечает за работу с данными в MVC?</p>
+            <label><input type="checkbox" name="q2" value="1"> Model</label><br>
+            <label><input type="checkbox" name="q2" value="2"> Connection</label><br>
+            <label><input type="checkbox" name="q2" value="3"> Controller</label><br>
+            <label><input type="checkbox" name="q2" value="4"> View</label><br>
+        </dev>
+
+        <dev>
+            <p>3. Какой компонент отвечает за бизнес-логику в MVC?</p>
+            <label><input type="checkbox" name="q3" value="1"> Controller</label><br>
+            <label><input type="checkbox" name="q3" value="2"> Model</label><br>
+            <label><input type="checkbox" name="q3" value="3"> Connection</label><br>
+            <label><input type="checkbox" name="q3" value="4"> Visible</label><br>
+        </dev>
+
+        <dev>
+            <p>4. Какой компонент отвечает за отображение данных пользователю?</p>
+            <label><input type="checkbox" name="q4" value="1"> View</label><br>
+            <label><input type="checkbox" name="q4" value="2"> Visible</label><br>
+            <label><input type="checkbox" name="q4" value="3"> Connection</label><br>
+            <label><input type="checkbox" name="q4" value="4"> Model</label><br>
+        </dev>
+
+        <dev>
+            <p>5. Что такое Thymeleaf?</p>
+            <label><input type="checkbox" name="q5" value="1"> Фреймворк для Java, работающий с БД</label><br>
+            <label><input type="checkbox" name="q5" value="2"> Библиотека, длая генерации Java кода</label><br>
+            <label><input type="checkbox" name="q5" value="3"> Шаблонизатор HTML кода</label><br>
+            <label><input type="checkbox" name="q5" value="4"> Инструмент для работы с сетевыми подключениями</label><br>
+        </dev>
+        <button type="submit">Отправить</button>
+    </form>
+    <p th:text="'Ваш результат: ' + (${result} ?: 0) + '/5'">Ваш результат: </p>
+</h1>
+</body>
+</html>
